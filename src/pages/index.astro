@@ -1,15 +1,19 @@
 ---
+import BaseLayout from '../layout/BaseLayout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title='Home'>
+  <h1 class='text-3xl mb-10'>Greetings! 🖖</h1>
+  <p class='text-xl w-7/12'>
+    Thank you for taking the time to visit this website. I have created this
+    website as a sample project to showcase my skills using Astro, Tailwind,
+    React and Sanity.io. My main objective with this project is to test the
+    capabilities of Astro as a framework for building a blog. Please note that
+    all data on this website is just dummy or false data.
+  </p>
+  <p class='text-orange-500 pt-20 text-xl'>
+    - <a href='https://owaaquino.com' target='_blank' class='hover:underline'
+      >Owa Aquino</a
+    >
+  </p>
+</BaseLayout>
