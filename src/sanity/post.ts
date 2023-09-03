@@ -4,7 +4,7 @@ import type { Slug } from '@sanity/types';
 
 import { useSanityClient, groq } from 'astro-sanity';
 
-interface Post {
+export interface Post {
   // Document
   _type: 'post';
   _createdAt: string;
@@ -22,4 +22,13 @@ interface Post {
 
 export async function getPosts(): Promise<Post[]> {
   return await useSanityClient().fetch(groq`*[_type == 'post']`);
+}
+
+export async function getPost(slug: string): Promise<Post> {
+  return await useSanityClient().fetch(
+    groq`*[_type == 'post' && slug.current == $slug][0]`,
+    {
+      slug,
+    }
+  );
 }
