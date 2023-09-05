@@ -1,10 +1,14 @@
 import { portableTextToHtml } from 'astro-sanity';
 import { urlForImage } from './urlForImage';
-import type { Image } from '@sanity/types';
+
+interface ImageProps {
+  asset: any;
+  alt?: string;
+}
 
 const customComponents = {
   types: {
-    image: ({ value }: any) => {
+    image: ({ value }: { value: ImageProps }) => {
       return `
         <picture>
           <source

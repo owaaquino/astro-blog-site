@@ -1,4 +1,3 @@
-import type { SanityReference } from '@sanity/client';
 import type { PortableTextBlock } from '@portabletext/types';
 import type { Slug } from '@sanity/types';
 
@@ -12,7 +11,6 @@ export interface Post {
   // Metadata
   title?: string;
   slug: Slug;
-  tags?: SanityReference[]; // TODO : Test if can get
   publishedAt?: string;
   summary?: string;
 

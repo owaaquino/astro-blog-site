@@ -1,6 +1,6 @@
 ---
 import type { InferGetStaticParamsType } from 'astro';
-import { PortableText } from 'astro-portabletext';
+import PortableText from '../../components/PortableText.astro';
 import BaseLayout from '../../layout/BaseLayout.astro';
 
 import { getPost, getPosts } from '../../sanity/post';
@@ -20,5 +20,5 @@ const post = await getPost(slug);
 
 <BaseLayout title={post.title!}>
   <h1>{post.title}</h1>
-  <PortableText value={post.body} />
+  <PortableText portableText={post.body} />
 </BaseLayout>
