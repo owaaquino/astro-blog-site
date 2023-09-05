@@ -4,7 +4,9 @@ const BaseNavigation = () => {
       <li className='list-none mr-2'>
         <a href='/'>Home</a>
       </li>
-
+      <li className='list-none  mr-2'>
+        <a href='/posts/'>Posts</a>
+      </li>
       <li className='list-none'>
         <a href='/about/'>About</a>
       </li>
